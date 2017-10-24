@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ],
+    "react-native-web/babel",
+    "transform-decorators-legacy"
+  ],
+  "presets": [
+    "stage-0",
+    "react-native"
+  ]
+}

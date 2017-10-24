@@ -1,0 +1,45 @@
+{
+  "name": "bibliotape",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "electron-rebuild",
+    "dev": "electron-webpack dev",
+    "compile:dll": "electron-webpack dll"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-react-native": "^4.0.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "devtron": "^1.4.0",
+    "electron": "^1.7.9",
+    "electron-builder": "^19.40.0",
+    "electron-rebuild": "^1.6.0",
+    "electron-webpack": "^1.9.0",
+    "electron-webpack-eslint": "^1.2.0",
+    "eslint": "^4.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "electron-is-dev": "^0.3.0",
+    "electron-window": "^0.8.1",
+    "electron-window-state": "^4.1.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-icons": "^2.2.7",
+    "react-native-web": "^0.1.12",
+    "url-exists-deep": "^1.1.0"
+  }
+}

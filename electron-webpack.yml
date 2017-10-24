@@ -1,0 +1,8 @@
+title: Bibliotape
+renderer:
+  webpackConfig: ./.webpack/renderer.extension.js
+  dll:
+    - react
+    - react-dom
+    - react-native-web
+    - react-icons
