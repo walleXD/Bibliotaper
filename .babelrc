@@ -7,7 +7,6 @@
         "regenerator": true
       }
     ],
-    "react-native-web/babel",
     "transform-decorators-legacy"
   ],
   "presets": [

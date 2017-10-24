@@ -6,3 +6,4 @@ renderer:
     - react-dom
     - react-native-web
     - react-icons
+    - prop-types
