@@ -1,9 +1,13 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Switch, Route } from 'react-router-dom'
+
+import HomePage from '@/pages/home'
+import ExamplePage from '@pages/example'
 
 const App = () =>
-  <View>
-    <Text>Jello</Text>
-  </View>
+  <Switch>
+    <Route path='/' component={HomePage} exact />
+    <Route path='/example' component={ExamplePage} />
+  </Switch>
 
 export default App

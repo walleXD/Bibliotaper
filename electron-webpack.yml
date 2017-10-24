@@ -7,3 +7,12 @@ renderer:
     - react-native-web
     - react-icons
     - prop-types
+    - redux-actions
+    - redux-promise
+    - fsa-redux-thunk
+    - redux-devtools-extension
+    - react-router-redux
+    - history
+    - react-router-dom
+    - redux
+    - react-redux

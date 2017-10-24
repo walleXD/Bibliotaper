@@ -9,7 +9,7 @@ const windowIdKeeper = {}
 const createMainWindow = () => {
   const mainWindow = createWindow(
     {
-      devURL: 'http://localhost:9080',
+      devURL: `http://localhost:${process.env.ELECTRON_WDS_PORT}`,
       prodURL: `file://${__dirname}/index.html`
     },
     { file: 'main-window-state.json' },
