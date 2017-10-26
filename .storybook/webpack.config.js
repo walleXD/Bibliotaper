@@ -6,7 +6,8 @@ module.exports = {
     alias: {
       'react-native': 'react-native-web',
       'react/lib/ReactNativePropRegistry': 'react-native-web/dist/modules/ReactNativePropRegistry',
-      'components': resolve(__dirname, '../', 'src', 'renderer', 'components')
+      'components': resolve(__dirname, '../', 'src', 'renderer', 'components'),
+      '@': resolve(__dirname, '../', 'src', 'renderer')
     }
   }
 }

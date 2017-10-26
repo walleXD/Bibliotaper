@@ -1,13 +1,13 @@
 export const flexStyleGenerator = ({
   align,
   justify,
-  row,
+  direction,
   wrap
 }) => {
   return {
     alignItems: align || 'stretch',
     justifyContent: justify || 'flex-start',
-    flexDirection: row ? 'row' : 'column',
+    flexDirection: direction || 'column',
     flexWrap: wrap ? 'wrap' : 'nowrap'
   }
 }

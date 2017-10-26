@@ -7,7 +7,7 @@ export default () => {
   storiesOf('Box', module)
     .add('Base', () => <Box><h1>Hello</h1></Box>)
     .add('Row', () =>
-      <Box row justify='center' pa={20}>
+      <Box justify='center' pa={20}>
         <Box pa={50}>
           <p>asdasdas asdasd asdasd</p>
         </Box>

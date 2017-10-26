@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import HomePage from '@/pages/home'
-import ExamplePage from '@pages/example'
+import ExamplePage from '@/pages/example'
 
 const App = () =>
   <Switch>

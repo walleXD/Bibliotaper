@@ -1,9 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Text, Button } from 'react-native'
+import Box from '../components/Box'
 
 const HomePage = () =>
-  <View>
+  <Box pa={100} ml={100}>
     <Text>Home Page</Text>
-  </View>
+    <Button
+      onPress={() => console.log('hello')}
+      title='sup'
+    />
+  </Box>
 
 export default HomePage

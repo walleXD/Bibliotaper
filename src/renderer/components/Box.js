@@ -1,27 +1,19 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View } from 'react-native'
 import { node, bool, string, number } from 'prop-types'
-import { marginStyleGenerator, flexStyleGenerator, paddingStyleGenerator } from '../lib/styleGenerator'
 
-const Box = ({ children, style, ...props }) => {
-  const { flex, margin, padding } = StyleSheet.create({
-    flex: {
-      ...flexStyleGenerator(props)
-    },
-    margin: {
-      ...marginStyleGenerator(props)
-    },
-    padding: {
-      ...paddingStyleGenerator(props)
+import Peppy from './Peppy'
+
+const Box = ({ children, style, ...props }) =>
+  <Peppy
+    space
+    {...props}
+    render={({spaceStyle, flexStyle}) =>
+      <View style={[style, spaceStyle, flexStyle]} {...props}>
+        {children}
+      </View>
     }
-  })
-
-  return (
-    <View style={[style, flex, margin, padding]} {...props}>
-      {children}
-    </View>
-  )
-}
+  />
 
 Box.propTypes = {
   children: node.isRequired,
