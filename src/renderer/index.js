@@ -3,6 +3,7 @@ import { AppRegistry } from 'react-native'
 import { Provider } from 'react-redux'
 import Router from 'react-router-redux/ConnectedRouter'
 import { replayActionRenderer } from 'electron-redux'
+import PeppyProvider from './containers/PeppyProvider'
 
 import App from './containers/App'
 import createStore from './lib/store'
@@ -17,9 +18,11 @@ const renderApp = Component => {
   AppRegistry.registerComponent('App', () =>
     () =>
       <Provider store={store}>
-        <Router history={history}>
-          <Component />
-        </Router>
+        <PeppyProvider>
+          <Router history={history}>
+            <Component />
+          </Router>
+        </PeppyProvider>
       </Provider>
   )
   AppRegistry.runApplication('App', { initialProps, rootTag })

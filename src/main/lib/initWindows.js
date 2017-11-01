@@ -20,17 +20,17 @@ const createMainWindow = () => {
 }
 
 const createStorybookWindow = async () => {
-  const devURL = 'http://localhost:6006'
+  const devURL = 'http://localhost:9009'
   try {
     await checkURL(devURL)
+    createWindow(
+      { devURL },
+      { file: 'storybook-window-state.json' },
+      { minWidth: 1100 }
+    )
   } catch (e) {
     return null
   }
-  createWindow(
-    { devURL },
-    { file: 'storybook-window-state.json' },
-    { minWidth: 1100 }
-  )
 }
 
 app.on('activate', () => {

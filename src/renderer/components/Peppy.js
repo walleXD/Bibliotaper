@@ -1,19 +1,45 @@
 import { Children } from 'react'
 import { StyleSheet } from 'react-native'
+import { func } from 'prop-types'
 
-import spaceStyleGen from '../lib/dynamicStylesheet/space'
-import flexStyleGen from '../lib/dynamicStylesheet/flex'
-
-const Peppy = ({render, space, flex, ...props}) => {
-  const { spaceStyle, flexStyle } = StyleSheet.create({
-    spaceStyle: space ? spaceStyleGen(props) : {},
-    flexStyle: flex ? flexStyleGen(props) : {}
-  })
-  console.log('peppy', spaceStyle)
-  return Children.only(render({
+const Peppy = (
+  {
+    render,
+    space,
+    flex,
+    text,
+    ...props
+  },
+  {
+    spaceStyleGenerator,
+    flexStyleGenerator,
+    textStyleGenerator
+  }
+) => {
+  const {
     spaceStyle,
-    flexStyle
+    flexStyle,
+    textStyle
+  } = StyleSheet.create({
+    spaceStyle: space ? spaceStyleGenerator(props) : {},
+    flexStyle: flex ? flexStyleGenerator(props) : {},
+    textStyle: text ? textStyleGenerator(props) : {}
+  })
+
+  return Children.only(render({
+    spaceStyleGenerator,
+    textStyleGenerator,
+    flexStyleGenerator,
+    spaceStyle,
+    flexStyle,
+    textStyle
   }))
+}
+
+Peppy.contextTypes = {
+  spaceStyleGenerator: func,
+  flexStyleGenerator: func,
+  textStyleGenerator: func
 }
 
 export default Peppy
